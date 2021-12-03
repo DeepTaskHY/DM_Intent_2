@@ -1,0 +1,18 @@
+{
+  "modules": {
+    "homecare": {
+      "project-id": "socialrobot-hyu-xdtlug",
+      "authorization": {
+        "key": "filename.json"
+      },
+      "language-code": "ko"
+    },
+    "reception": {
+      "project-id": "socialrobot-hyu-reception-nyla",
+      "authorization": {
+        "key": "filename.json"
+      },
+      "language-code": "ko"
+    }
+  }
+}
