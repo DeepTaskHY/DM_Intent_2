@@ -1,6 +1,3 @@
-torch==1.7.1
-gluonnlp>=0.6.0
-sentencepiece>=0.1.6
 google-cloud-dialogflow==2.7.1
 https://github.com/SKTBrain/KoBERT/archive/master.zip
 https://github.com/DeepTaskHY/ROS/archive/main.zip
