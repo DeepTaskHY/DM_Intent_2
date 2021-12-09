@@ -37,8 +37,8 @@ def get_information(human_speech):
     for key, val in response.query_result.parameters.items():
         if isinstance(val, MapComposite):
             val = dict(val)
-        elif type(val) != str:
-            val = list(val)
+        # elif type(val) != str:
+            # val = list(val)
         information[key] = val
 
     return information
