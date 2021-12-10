@@ -131,14 +131,17 @@ dmypy.json
 # IDEA
 .idea/
 
+# Authorization key
+/dm_intent/keys/*
+
 # Configuration
 dm_intent/configuration.json
 
-# Data
+# Model checkpoints
 dm_intent/ckpt/
 dm_intent/data/data_kobert.pkl
 
-# Scripts
+# Test scripts
 dm_intent/scripts/test_kobert.py
 dm_intent/scripts/home_publisher.py
 dm_intent/scripts/re_publisher.py
