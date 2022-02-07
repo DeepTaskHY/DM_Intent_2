@@ -17,7 +17,8 @@ test_path = get_package_path('dm_intent')
 # set homecare or reception
 version = 'homecare'
 
-model = Model(test_path + '/model/model_ckpt.ckpt')
+# model = Model(test_path + '/model/model_ckpt.ckpt')
+model = Model(test_path + '/ckpt/kobert/kobert.pt')
 publisher = rospy.Publisher('/taskCompletion', String, queue_size=10)
 
 configuration = get_module_configuration('dm_intent', version)

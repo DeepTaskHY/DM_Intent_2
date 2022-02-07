@@ -4,17 +4,18 @@ import rospkg
 import torch
 import pickle
 from gluonnlp.data import SentencepieceTokenizer
-from kobert.utils import get_tokenizer
+# from kobert.utils import get_tokenizer
 
 test_path = rospkg.RosPack().get_path('dm_intent')
 # test_path = '..'
+tokenizer_path = '/data/tokenizer/kobert_news_wiki_ko_cased-1087f8699e.spiece'
 
 class Model:
     def __init__(self, ckpt):
         # check map_location whether cpu or gpu
-        self.kobert = torch.load(test_path + '/ckpt/kobert/kobert.pt', map_location=torch.device('cpu')) # 학습된 모델 불러오기
+        self.kobert = torch.load(ckpt, map_location=torch.device('cpu')) # 학습된 모델 불러오기
         self.kobert.eval()
-        self.sp = SentencepieceTokenizer(get_tokenizer())
+        self.sp = SentencepieceTokenizer(test_path+tokenizer_path)
         with open(test_path + '/data/word2id.pkl', 'rb') as f:
             self.word2id = pickle.load(f)
     def inference(self, text):
